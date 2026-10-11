@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Header và Fixed Footer</title>
+    <title>Menu dọc Dropdown</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+    <h1>Thực hành tạo menu dọc</h1>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li>
+                <a href="#products">Sản phẩm</a>
+                <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#services">Dịch vụ</a>
+                <ul>
+                    <li><a href="#design">Thiết kế Web</a></li>
+                    <li><a href="#coding">Lập trình Web</a></li>
+                    <li><a href="#support">Hỗ trợ</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
     </div>
 
-    <div class="main" id="home">
-        <h1>Fixed Top Menu</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-
-        <section id="news">
-            <h3>News</h3>
-            <p>Some text some text some text some text...</p>
-            <p>Some text some text some text some text...</p>
-            <p>Some text some text some text some text...</p>
-        </section>
-
-        <section id="contact">
-            <h3>Contact</h3>
-            <p>Email: example@example.com</p>
-            <p>Phone: 0123 456 789</p>
-        </section>
-
-        <section id="about">
-            <h3>About</h3>
-            <p>Trang này dùng để thực hành fixed header và fixed footer bằng CSS.</p>
-        </section>
-
-        <p>Cuộn xuống để kiểm tra menu trên cùng và footer phía dưới luôn được cố định trên màn hình.</p>
-    </div>
-
-    <div class="footer">
-        Fixed Footer - CSS Practice
+    <div class="content">
+        <h2>Menu dropdown dọc bằng CSS</h2>
+        <p>Di chuột vào mục “Sản phẩm” hoặc “Dịch vụ” để hiển thị menu con.</p>
     </div>
 </body>
 </html>
