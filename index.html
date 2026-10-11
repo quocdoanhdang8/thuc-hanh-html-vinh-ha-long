@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu ngang Dropdown</title>
+    <title>Trang Chủ Giản Lược</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Thực hành tạo menu ngang</h1>
+    <header class="main-header">
+        <h1>Tiêu đề Trang Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="menu">
-        <ul>
-            <li><a href="#home">Trang chủ</a></li>
-            <li>
-                <a href="#products">Sản phẩm</a>
-                <ul>
-                    <li><a href="#html">HTML</a></li>
-                    <li><a href="#css">CSS</a></li>
-                    <li><a href="#javascript">JavaScript</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#services">Dịch vụ</a>
-                <ul>
-                    <li><a href="#design">Thiết kế Web</a></li>
-                    <li><a href="#coding">Lập trình Web</a></li>
-                    <li><a href="#support">Hỗ trợ</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </div>
+    <div class="page-container">
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </aside>
 
-    <div class="content">
-        <h2>Menu dropdown ngang bằng CSS</h2>
-        <p>Di chuột vào mục “Sản phẩm” hoặc “Dịch vụ” để menu con xổ xuống.</p>
+        <main class="main-content">
+            <h2>Nội dung chính của trang</h2>
+            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit.</p>
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
+        </aside>
     </div>
 </body>
 </html>
