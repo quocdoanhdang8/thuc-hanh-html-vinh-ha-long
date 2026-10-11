@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tạo form đơn giản</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 30px;
+        }
+
+        .form-box {
+            width: 620px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1f4e79;
+        }
+
+        .row {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: inline-block;
+            width: 140px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            padding: 6px;
+            width: 300px;
+        }
+
+        textarea {
+            height: 70px;
+        }
+
+        .options {
+            display: inline-block;
+            width: 400px;
+        }
+
+        .buttons {
+            margin-left: 145px;
+            margin-top: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 16px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>Phần 1: Form thông tin cá nhân</h2>
+
+        <form>
+            <div class="row">
+                <label for="yourname">Họ và tên:</label>
+                <input type="text" id="yourname" name="yourname">
+            </div>
+
+            <div class="row">
+                <label for="email1">Email:</label>
+                <input type="email" id="email1" name="email">
+            </div>
+
+            <div class="row">
+                <label>Sở thích:</label>
+                <div class="options">
+                    <input type="checkbox" name="hobby" value="sport"> Thể thao
+                    <input type="checkbox" name="hobby" value="music"> Âm nhạc
+                    <input type="checkbox" name="hobby" value="reading"> Đọc sách
+                    <input type="checkbox" name="hobby" value="travel"> Du lịch
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+
+    <div class="form-box">
+        <h2>Phần 2: Form đăng ký học viên</h2>
+
+        <form>
+            <div class="row">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+
+            <div class="row">
+                <label for="email2">Email:</label>
+                <input type="email" id="email2" name="email">
+            </div>
+
+            <div class="row">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+
+            <div class="row">
+                <label for="birthday">Ngày sinh:</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+
+            <div class="row">
+                <label>Giới tính:</label>
+                <div class="options">
+                    <input type="radio" name="gender" value="male"> Nam
+                    <input type="radio" name="gender" value="female"> Nữ
+                    <input type="radio" name="gender" value="other"> Khác
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="address">Địa chỉ:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+
+            <div class="row">
+                <label for="course">Khóa học:</label>
+                <select id="course" name="course">
+                    <option value="html-css">HTML &amp; CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Hình thức học:</label>
+                <div class="options">
+                    <input type="radio" name="study_type" value="online"> Online
+                    <input type="radio" name="study_type" value="offline"> Offline
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Sở thích:</label>
+                <div class="options">
+                    <input type="checkbox" name="hobby" value="coding"> Lập trình
+                    <input type="checkbox" name="hobby" value="music"> Âm nhạc
+                    <input type="checkbox" name="hobby" value="sport"> Thể thao
+                    <input type="checkbox" name="hobby" value="travel"> Du lịch
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="note">Ghi chú:</label>
+                <textarea id="note" name="note"></textarea>
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Đăng ký">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
