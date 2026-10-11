@@ -3,39 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch họp công ty</title>
+    <title>Danh sách trong CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Lịch họp công ty</h1>
+    <h1>Thực hành danh sách trong CSS</h1>
 
-    <table border="1">
-        <tr>
-            <th>Ngày</th>
-            <th>Giờ</th>
-            <th>Nội dung cuộc họp</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Thứ Hai</td>
-            <td>08:00 - 09:00</td>
-            <td>Họp giao ban đầu tuần</td>
-        </tr>
-        <tr>
-            <td>14:00 - 15:00</td>
-            <td>Họp phòng Kinh doanh</td>
-        </tr>
-        <tr>
-            <td>Thứ Ba</td>
-            <td colspan="2">09:00 - 11:00: Họp triển khai dự án mới</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Thứ Tư</td>
-            <td>10:00 - 11:00</td>
-            <td>Họp phòng Kỹ thuật</td>
-        </tr>
-        <tr>
-            <td>15:00 - 16:00</td>
-            <td>Họp đánh giá tiến độ</td>
-        </tr>
-    </table>
+    <section>
+        <h2>1. Danh sách môn học - list-style-type: square</h2>
+        <ul class="subject-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Danh sách có thứ tự - số La Mã viết hoa</h2>
+        <ol class="roman-list">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. Dùng hình ảnh làm dấu đánh dấu</h2>
+        <ul class="image-list">
+            <li>Visual Studio Code</li>
+            <li>Google Chrome</li>
+            <li>GitHub</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. So sánh list-style-position</h2>
+        <div class="position-demo">
+            <div>
+                <h3>Outside</h3>
+                <ul class="outside-list">
+                    <li>HTML là ngôn ngữ đánh dấu dùng để xây dựng cấu trúc trang web.</li>
+                    <li>CSS dùng để định dạng giao diện trang web.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Inside</h3>
+                <ul class="inside-list">
+                    <li>HTML là ngôn ngữ đánh dấu dùng để xây dựng cấu trúc trang web.</li>
+                    <li>CSS dùng để định dạng giao diện trang web.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Thuộc tính rút gọn list-style</h2>
+        <ul class="short-list">
+            <li>Thiết kế giao diện</li>
+            <li>Viết mã nguồn</li>
+            <li>Kiểm thử</li>
+            <li>Đưa sản phẩm lên GitHub</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>6. Danh sách có màu sắc và khoảng cách</h2>
+        <ul class="color-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Lộ trình học lập trình Web</h2>
+        <ol class="roadmap-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+            <li>GitHub</li>
+        </ol>
+    </section>
 </body>
 </html>
