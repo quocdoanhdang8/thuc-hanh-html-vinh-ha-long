@@ -1,25 +1,58 @@
+/* Element selector */
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f6fa;
     color: #333;
+    margin: 40px;
 }
 
-h1 {
+/* ID selector */
+#main-title {
+    text-align: center;
     color: #1f4e79;
 }
 
-section {
+/* Class selector */
+.intro {
     background-color: white;
-    border: 1px solid #cccccc;
-    padding: 18px;
-    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #1f4e79;
 }
 
-.external-title {
-    color: orange;
+.hobby-list {
+    padding: 20px 40px;
+    background-color: white;
 }
 
-.external-text {
-    color: teal;
+.hobby-one {
+    color: #d32f2f;
+}
+
+.hobby-two {
+    color: #1976d2;
+}
+
+.hobby-three {
+    color: #388e3c;
+}
+
+/* Grouping selector */
+h1, h2, p {
+    line-height: 1.5;
+}
+
+/* Element selector */
+button {
+    padding: 10px 18px;
+    border: none;
+    background-color: #1f4e79;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Pseudo-class selector */
+button:hover {
+    background-color: #ff9800;
+    color: #111;
 }
