@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Màu nền và ảnh nền</title>
+    <title>Box Model 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi</h1>
+    <h1>Thực hành CSS Box Model</h1>
 
-    <p>
-        Đây là một trang web đơn giản dùng để thực hành thuộc tính background-color và background-image trong CSS.
-    </p>
+    <div class="cards">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>Thẻ này sử dụng box-sizing: content-box.</p>
+        </div>
 
-    <div class="important-box">
-        <h2>Nội dung quan trọng</h2>
-        <p>Khối này sử dụng ảnh nền và nội dung được căn giữa bằng CSS.</p>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>Thẻ này sử dụng box-sizing: border-box.</p>
+        </div>
+
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>Thẻ này cũng sử dụng border-box và có nền màu đỏ.</p>
+        </div>
     </div>
 </body>
 </html>
