@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid - SASS Refactor</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="page-layout">
+        <div class="grid-container grid-container--foreground">
+            <div class="grid-wrapper grid-wrapper--header">
+                <div class="grid-content grid-content--full header-block"></div>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--main">
+                <aside class="grid-content sidebar sidebar--left">
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                </aside>
+
+                <div class="grid-content grid-spacer"></div>
+                <div class="grid-content grid-spacer"></div>
+                <div class="grid-content grid-spacer"></div>
+                <div class="grid-content grid-spacer"></div>
+                <div class="grid-content grid-spacer"></div>
+                <div class="grid-content grid-spacer"></div>
+
+                <aside class="grid-content sidebar sidebar--right">
+                    <div class="aside-panel"></div>
+                </aside>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--footer">
+                <div class="grid-content grid-content--full footer-block"></div>
+            </div>
+        </div>
+
+        <div class="grid-container grid-container--guides" aria-hidden="true">
+            <div class="grid-wrapper grid-wrapper--guides">
+                <div class="grid-content guide-column guide-column--first"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+                <div class="grid-content guide-column"></div>
+            </div>
+        </div>
+    </div>
+
+    <p class="description">
+        Thay đổi kích thước cửa sổ trình duyệt để thấy lưới luôn sử dụng 100% không gian có sẵn.
+    </p>
+</body>
+</html>
