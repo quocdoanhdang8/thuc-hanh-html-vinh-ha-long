@@ -3,59 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Gallery</title>
+    <title>CSS grid-row Property</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Responsive Image Gallery</h1>
-        <p class="subtitle">Thay đổi kích thước cửa sổ trình duyệt để xem hiệu ứng responsive.</p>
+    <h1>Thực hành CSS grid-row</h1>
 
-        <div class="gallery-row">
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
-                        <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre">
-                    </a>
-                    <div class="desc">Phong cảnh Cinque Terre</div>
-                </div>
-            </div>
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
-                        <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest">
-                    </a>
-                    <div class="desc">Khu rừng xanh</div>
-                </div>
-            </div>
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg">
-                        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights">
-                    </a>
-                    <div class="desc">Bắc cực quang</div>
-                </div>
-            </div>
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="https://www.w3schools.com/css/img_mountains.jpg">
-                        <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="Mountains">
-                    </a>
-                    <div class="desc">Dãy núi hùng vĩ</div>
-                </div>
-            </div>
+    <section>
+        <h2>Ví dụ 1: grid-row: 1 / 3</h2>
+        <div class="grid-container example-one">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
         </div>
+    </section>
 
-        <div class="clearfix"></div>
-
-        <div class="note">
-            <p><strong>Trên 700px:</strong> 4 ảnh trên một dòng.</p>
-            <p><strong>Dưới 700px:</strong> 2 ảnh trên một dòng.</p>
-            <p><strong>Dưới 500px:</strong> 1 ảnh trên một dòng.</p>
+    <section>
+        <h2>Ví dụ 2: grid-row: 2 / 4</h2>
+        <div class="grid-container example-two">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
         </div>
-    </div>
+    </section>
+
+    <section>
+        <h2>Ví dụ 3: grid-row: span 2</h2>
+        <div class="grid-container example-three">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
+        </div>
+    </section>
 </body>
 </html>
