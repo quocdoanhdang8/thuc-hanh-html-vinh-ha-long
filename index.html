@@ -3,75 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Responsive</title>
+    <title>Layout Responsive với RWD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">MyBrand</div>
-        <nav class="nav" aria-label="Điều hướng chính">
-            <ul>
-                <li><a href="#home">Trang chủ</a></li>
-                <li><a href="#services">Dịch vụ</a></li>
-                <li><a href="#testimonials">Đánh giá</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="main">
+        <div id="header">
+            <div class="logo">MyWebsite</div>
+            <div class="slogan">Responsive Web Design</div>
+        </div>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <p class="eyebrow">Giải pháp số cho doanh nghiệp</p>
-                <h1>Chào mừng đến với MyBrand</h1>
-                <p>Chúng tôi cung cấp các giải pháp thiết kế, phần mềm và marketing giúp doanh nghiệp phát triển hiệu quả.</p>
-                <a href="#services" class="btn">Tìm hiểu thêm</a>
-            </div>
-        </section>
+        <div id="menu">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Tin tức</a>
+            <a href="#">Liên hệ</a>
+        </div>
 
-        <section id="services" class="services">
-            <div class="section-heading">
-                <h2>Dịch vụ của chúng tôi</h2>
-                <p>Các giải pháp được thiết kế để phù hợp với nhiều nhu cầu khác nhau.</p>
+        <div id="page-body">
+            <div id="left">
+                <h3>Danh mục</h3>
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">JavaScript</a>
+                <a href="#">Responsive Design</a>
             </div>
 
-            <div class="service-container">
-                <article class="service">
-                    <h3>Thiết kế web</h3>
-                    <p>Thiết kế website hiện đại, dễ sử dụng và hiển thị tốt trên nhiều thiết bị.</p>
-                </article>
-                <article class="service">
-                    <h3>Phát triển phần mềm</h3>
-                    <p>Xây dựng giải pháp phần mềm phù hợp với quy trình và mục tiêu kinh doanh.</p>
-                </article>
-                <article class="service">
-                    <h3>Marketing số</h3>
-                    <p>Hỗ trợ doanh nghiệp tiếp cận khách hàng bằng các kênh digital hiệu quả.</p>
-                </article>
-            </div>
-        </section>
+            <div id="content">
+                <h1>Tạo layout với RWD</h1>
+                <p>Đây là khu vực nội dung chính của trang web. Bố cục được xây dựng bằng các thẻ div kết hợp với CSS và Media Queries.</p>
 
-        <section class="testimonials" id="testimonials">
-            <div class="section-heading">
-                <h2>Khách hàng nói gì?</h2>
-                <p>Những phản hồi tiêu biểu từ khách hàng của MyBrand.</p>
+                <div class="cards">
+                    <div class="card">
+                        <h2>Nội dung 1</h2>
+                        <p>Khối nội dung tự thay đổi kích thước theo độ rộng màn hình.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Nội dung 2</h2>
+                        <p>Trên tablet và điện thoại, các thành phần sẽ tự động sắp xếp lại.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Nội dung 3</h2>
+                        <p>Trang không bị tràn ngang và vẫn dễ đọc trên màn hình nhỏ.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="testimonial-grid">
-                <blockquote class="testimonial">
-                    <p>“Dịch vụ tuyệt vời, giao diện đẹp và dễ sử dụng!”</p>
-                    <cite>— Khách hàng A</cite>
-                </blockquote>
-                <blockquote class="testimonial">
-                    <p>“Tôi rất hài lòng với cách MyBrand hỗ trợ dự án của chúng tôi.”</p>
-                    <cite>— Khách hàng B</cite>
-                </blockquote>
+            <div id="right">
+                <h3>Thông tin</h3>
+                <div class="widget">Thông báo mới</div>
+                <div class="widget">Lịch học</div>
+                <div class="widget">Liên kết hữu ích</div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer class="footer" id="contact">
-        <p>&copy; 2026 MyBrand. All rights reserved.</p>
-    </footer>
+        <div id="footer">
+            <p>&copy; 2026 MyWebsite - Bài tập Responsive Web Design</p>
+        </div>
+    </div>
 </body>
 </html>
