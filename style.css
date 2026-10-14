@@ -25,30 +25,34 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
     margin-top: 20px;
 }
 
-.item {
-    background-color: lightblue;
+.grid-container div {
     padding: 20px;
     text-align: center;
-    border: 1px solid #8abed1;
+    border: 1px solid #999;
 }
 
-.example-one .item1 {
-    grid-row: 1 / 3;
+.example-one {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.example-one div {
+    background-color: lightblue;
+}
+
+.example-two {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px;
+}
+
+.example-two div {
     background-color: lightgreen;
 }
 
-.example-two .item1 {
-    grid-row: 2 / 4;
-    background-color: khaki;
-}
-
-.example-three .item1 {
-    grid-row: span 2;
-    background-color: plum;
+section p {
+    margin: 18px 0 0;
+    line-height: 1.6;
 }
