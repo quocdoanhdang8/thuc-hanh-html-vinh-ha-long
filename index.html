@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với display</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Bố cục trang web với display</h1>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
 
-    <nav>
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Liên hệ</a>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+
+        <button class="menu-icon" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
     </nav>
 
-    <section>
-        <div class="box">
-            <h2>Cột 1</h2>
-            <p>Nội dung cột thứ nhất.</p>
-        </div>
-        <div class="box">
-            <h2>Cột 2</h2>
-            <p>Nội dung cột thứ hai.</p>
-        </div>
-        <div class="box">
-            <h2>Cột 3</h2>
-            <p>Nội dung cột thứ ba.</p>
-        </div>
-    </section>
+    <main>
+        <section id="home">
+            <h1>Responsive Navbar</h1>
+            <p>Thu nhỏ cửa sổ xuống dưới 768px để kiểm tra menu trên thiết bị di động.</p>
+        </section>
 
-    <footer>
-        <p>Bản quyền &copy; 2026</p>
-    </footer>
+        <section id="about">
+            <h2>Giới thiệu</h2>
+            <p>Thanh điều hướng được xây dựng bằng Flexbox và Media Queries.</p>
+        </section>
+
+        <section id="services">
+            <h2>Dịch vụ</h2>
+            <p>Trên mobile, nhấn biểu tượng ☰ để mở hoặc đóng danh sách menu.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Liên hệ</h2>
+            <p>Đây là bài thực hành responsive navbar bằng HTML, CSS và JavaScript.</p>
+        </section>
+    </main>
 </body>
 </html>
