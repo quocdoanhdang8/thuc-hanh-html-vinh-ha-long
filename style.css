@@ -1,205 +1,101 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    padding: 30px 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eef1f4;
+    background-color: #f7f7f7;
     color: #222;
-    line-height: 1.6;
 }
 
-#main {
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff;
-    min-height: 100vh;
 }
 
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 24px 30px;
-    background-color: #2c3e50;
-    color: #fff;
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.slogan {
-    font-size: 16px;
-    opacity: 0.9;
-}
-
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #34495e;
-}
-
-#menu a {
-    display: block;
-    padding: 14px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-#menu a:hover {
-    background-color: #1abc9c;
-}
-
-#page-body {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 24px;
-}
-
-#left,
-#right {
-    width: 220px;
-    flex-shrink: 0;
-    background-color: #f4f6f7;
-    padding: 18px;
-    border-radius: 8px;
-}
-
-#left h3,
-#right h3 {
-    margin-bottom: 14px;
-    color: #2c3e50;
-}
-
-#left a {
-    display: block;
-    padding: 10px 0;
-    color: #34495e;
-    text-decoration: none;
-    border-bottom: 1px solid #dcdfe1;
-}
-
-#left a:hover {
-    color: #16a085;
-    font-weight: 700;
-}
-
-#content {
-    flex: 1;
-    min-width: 0;
-    padding: 10px;
-}
-
-#content h1 {
-    margin-bottom: 14px;
-    color: #2c3e50;
-}
-
-#content > p {
-    margin-bottom: 20px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.card {
-    background-color: #dff3ff;
-    padding: 18px;
-    border-radius: 8px;
-    min-height: 150px;
-}
-
-.card h2 {
+h1 {
     margin-bottom: 8px;
-    font-size: 20px;
 }
 
-.widget {
-    padding: 12px;
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #666;
+}
+
+.gallery-row {
+    margin: 0 -6px;
+}
+
+.responsive {
+    float: left;
+    width: 25%;
+    padding: 0 6px;
     margin-bottom: 12px;
+}
+
+.gallery {
+    border: 1px solid #ccc;
     background-color: #fff;
-    border: 1px solid #dfe4e8;
-    border-radius: 6px;
 }
 
-#footer {
-    padding: 20px;
+.gallery:hover {
+    border-color: #777;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.desc {
+    padding: 15px;
     text-align: center;
-    background-color: #2c3e50;
-    color: #fff;
 }
 
-@media (max-width: 900px) {
-    #page-body {
-        flex-wrap: wrap;
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.note {
+    margin-top: 18px;
+    padding: 16px 18px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    line-height: 1.7;
+}
+
+.note p {
+    margin: 4px 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%;
     }
 
-    #left {
-        width: 30%;
-    }
-
-    #content {
-        width: calc(70% - 20px);
-        flex: none;
-    }
-
-    #right {
-        width: 100%;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .gallery img {
+        height: 240px;
     }
 }
 
-@media (max-width: 600px) {
-    #header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 16px;
+@media only screen and (max-width: 500px) {
+    body {
+        padding: 20px 12px;
     }
 
-    #menu {
-        flex-direction: column;
-    }
-
-    #menu a {
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    #page-body {
-        flex-direction: column;
-        padding: 16px;
-    }
-
-    #left,
-    #content,
-    #right {
+    .responsive {
         width: 100%;
     }
 
-    #content {
-        padding: 0;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .logo {
-        font-size: 26px;
+    .gallery img {
+        height: auto;
     }
 }
