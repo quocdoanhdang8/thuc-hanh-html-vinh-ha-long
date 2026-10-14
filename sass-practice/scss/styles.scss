@@ -1,0 +1,64 @@
+$primary: #6f42c1;
+$secondary: #20c997;
+$text: #222;
+$radius: 10px;
+
+@mixin card($bg) {
+  background: $bg;
+  border-radius: $radius;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: $text;
+  background: #f5f7fb;
+}
+
+.page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  h1 {
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  .intro {
+    margin-bottom: 24px;
+  }
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  .card {
+    @include card(white);
+    border-top: 4px solid $secondary;
+
+    h2 {
+      color: $primary;
+      font-size: 20px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      transition: 0.2s;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
