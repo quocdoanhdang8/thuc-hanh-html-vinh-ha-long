@@ -3,44 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>Landing Page Responsive</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">MyWebsite</div>
-
-        <ul class="nav-links">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-
-        <button class="menu-icon" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
-    </nav>
+    <header class="header">
+        <div class="logo">MyBrand</div>
+        <nav class="nav" aria-label="Điều hướng chính">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#testimonials">Đánh giá</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <section id="home">
-            <h1>Responsive Navbar</h1>
-            <p>Thu nhỏ cửa sổ xuống dưới 768px để kiểm tra menu trên thiết bị di động.</p>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Giải pháp số cho doanh nghiệp</p>
+                <h1>Chào mừng đến với MyBrand</h1>
+                <p>Chúng tôi cung cấp các giải pháp thiết kế, phần mềm và marketing giúp doanh nghiệp phát triển hiệu quả.</p>
+                <a href="#services" class="btn">Tìm hiểu thêm</a>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>Giới thiệu</h2>
-            <p>Thanh điều hướng được xây dựng bằng Flexbox và Media Queries.</p>
+        <section id="services" class="services">
+            <div class="section-heading">
+                <h2>Dịch vụ của chúng tôi</h2>
+                <p>Các giải pháp được thiết kế để phù hợp với nhiều nhu cầu khác nhau.</p>
+            </div>
+
+            <div class="service-container">
+                <article class="service">
+                    <h3>Thiết kế web</h3>
+                    <p>Thiết kế website hiện đại, dễ sử dụng và hiển thị tốt trên nhiều thiết bị.</p>
+                </article>
+                <article class="service">
+                    <h3>Phát triển phần mềm</h3>
+                    <p>Xây dựng giải pháp phần mềm phù hợp với quy trình và mục tiêu kinh doanh.</p>
+                </article>
+                <article class="service">
+                    <h3>Marketing số</h3>
+                    <p>Hỗ trợ doanh nghiệp tiếp cận khách hàng bằng các kênh digital hiệu quả.</p>
+                </article>
+            </div>
         </section>
 
-        <section id="services">
-            <h2>Dịch vụ</h2>
-            <p>Trên mobile, nhấn biểu tượng ☰ để mở hoặc đóng danh sách menu.</p>
-        </section>
+        <section class="testimonials" id="testimonials">
+            <div class="section-heading">
+                <h2>Khách hàng nói gì?</h2>
+                <p>Những phản hồi tiêu biểu từ khách hàng của MyBrand.</p>
+            </div>
 
-        <section id="contact">
-            <h2>Liên hệ</h2>
-            <p>Đây là bài thực hành responsive navbar bằng HTML, CSS và JavaScript.</p>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial">
+                    <p>“Dịch vụ tuyệt vời, giao diện đẹp và dễ sử dụng!”</p>
+                    <cite>— Khách hàng A</cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>“Tôi rất hài lòng với cách MyBrand hỗ trợ dự án của chúng tôi.”</p>
+                    <cite>— Khách hàng B</cite>
+                </blockquote>
+            </div>
         </section>
     </main>
+
+    <footer class="footer" id="contact">
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
 </body>
 </html>
