@@ -3,63 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Responsive với RWD</title>
+    <title>Responsive Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        <div id="header">
-            <div class="logo">MyWebsite</div>
-            <div class="slogan">Responsive Web Design</div>
-        </div>
+    <div class="container">
+        <h1>Responsive Image Gallery</h1>
+        <p class="subtitle">Thay đổi kích thước cửa sổ trình duyệt để xem hiệu ứng responsive.</p>
 
-        <div id="menu">
-            <a href="#">Trang chủ</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Dịch vụ</a>
-            <a href="#">Tin tức</a>
-            <a href="#">Liên hệ</a>
-        </div>
-
-        <div id="page-body">
-            <div id="left">
-                <h3>Danh mục</h3>
-                <a href="#">HTML</a>
-                <a href="#">CSS</a>
-                <a href="#">JavaScript</a>
-                <a href="#">Responsive Design</a>
-            </div>
-
-            <div id="content">
-                <h1>Tạo layout với RWD</h1>
-                <p>Đây là khu vực nội dung chính của trang web. Bố cục được xây dựng bằng các thẻ div kết hợp với CSS và Media Queries.</p>
-
-                <div class="cards">
-                    <div class="card">
-                        <h2>Nội dung 1</h2>
-                        <p>Khối nội dung tự thay đổi kích thước theo độ rộng màn hình.</p>
-                    </div>
-                    <div class="card">
-                        <h2>Nội dung 2</h2>
-                        <p>Trên tablet và điện thoại, các thành phần sẽ tự động sắp xếp lại.</p>
-                    </div>
-                    <div class="card">
-                        <h2>Nội dung 3</h2>
-                        <p>Trang không bị tràn ngang và vẫn dễ đọc trên màn hình nhỏ.</p>
-                    </div>
+        <div class="gallery-row">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+                        <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre">
+                    </a>
+                    <div class="desc">Phong cảnh Cinque Terre</div>
                 </div>
             </div>
 
-            <div id="right">
-                <h3>Thông tin</h3>
-                <div class="widget">Thông báo mới</div>
-                <div class="widget">Lịch học</div>
-                <div class="widget">Liên kết hữu ích</div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
+                        <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest">
+                    </a>
+                    <div class="desc">Khu rừng xanh</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg">
+                        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights">
+                    </a>
+                    <div class="desc">Bắc cực quang</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://www.w3schools.com/css/img_mountains.jpg">
+                        <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="Mountains">
+                    </a>
+                    <div class="desc">Dãy núi hùng vĩ</div>
+                </div>
             </div>
         </div>
 
-        <div id="footer">
-            <p>&copy; 2026 MyWebsite - Bài tập Responsive Web Design</p>
+        <div class="clearfix"></div>
+
+        <div class="note">
+            <p><strong>Trên 700px:</strong> 4 ảnh trên một dòng.</p>
+            <p><strong>Dưới 700px:</strong> 2 ảnh trên một dòng.</p>
+            <p><strong>Dưới 500px:</strong> 1 ảnh trên một dòng.</p>
         </div>
     </div>
 </body>
