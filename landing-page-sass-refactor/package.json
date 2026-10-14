@@ -1,0 +1,12 @@
+{
+  "name": "landing-page-sass-refactor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass scss/main.scss css/main.css --style=compressed",
+    "watch": "sass scss/main.scss css/main.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
