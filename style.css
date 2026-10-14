@@ -10,130 +10,141 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f4f7;
+    background-color: #f3f5f7;
     color: #222;
 }
 
-.container {
+.page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.header,
-.footer {
-    background-color: #333;
+.header {
+    background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 24px 20px;
+    padding: 28px 20px;
 }
 
 .header h1 {
     margin-bottom: 8px;
 }
 
-.nav {
+.navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
-    background-color: #444;
+    gap: 8px;
+    background-color: #34495e;
     padding: 12px;
 }
 
-.nav a {
+.navigation a {
     color: white;
     text-decoration: none;
     padding: 10px 16px;
     border-radius: 4px;
 }
 
-.nav a:hover {
-    background-color: #666;
+.navigation a:hover {
+    background-color: #1abc9c;
 }
 
-.main-container {
+.layout {
     display: flex;
     flex: 1;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: stretch;
 }
 
-.content {
+.main-content {
     flex: 3;
+    min-width: 0;
     padding: 30px;
     background-color: white;
 }
 
-.content h2,
+.main-content h2,
 .sidebar h2 {
     margin-bottom: 15px;
 }
 
-.content > p {
-    line-height: 1.7;
+.main-content > p {
     margin-bottom: 24px;
+    line-height: 1.7;
 }
 
-.article-list {
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
 
-.article {
-    flex: 1 1 260px;
+.card {
+    flex: 1 1 240px;
     padding: 20px;
-    background-color: #eef6ff;
-    border: 1px solid #c9def4;
+    background-color: #eaf4ff;
+    border: 1px solid #c6dff5;
     border-radius: 8px;
 }
 
-.article h3 {
+.card h3 {
     margin-bottom: 10px;
 }
 
-.article p {
+.card p {
     line-height: 1.6;
 }
 
 .sidebar {
     flex: 1;
-    background-color: #e9ecef;
+    min-width: 220px;
     padding: 30px 20px;
+    background-color: #e9ecef;
 }
 
-.sidebar-item {
+.widget {
     margin-bottom: 14px;
     padding: 16px;
     background-color: white;
-    border: 1px solid #d1d5da;
+    border: 1px solid #d4d9de;
     border-radius: 6px;
 }
 
 .footer {
     margin-top: auto;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
-    .main-container {
+    .layout {
         flex-direction: column;
     }
 
-    .content,
+    .main-content,
     .sidebar {
         width: 100%;
+        min-width: 0;
     }
 
-    .nav {
+    .navigation {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
     }
 
-    .content,
+    .main-content,
     .sidebar {
         padding: 22px 16px;
+    }
+
+    .cards {
+        flex-direction: column;
     }
 }
