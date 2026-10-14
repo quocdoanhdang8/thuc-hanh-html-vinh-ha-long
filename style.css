@@ -4,111 +4,226 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
+html {
+    scroll-behavior: smooth;
 }
 
-.navbar {
-    position: relative;
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+    padding: 18px 5%;
     background-color: #333;
-    padding: 15px 20px;
     color: white;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
-.nav-links {
+.nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
+.nav a {
     color: white;
-    font-size: 18px;
-    display: block;
-    padding: 8px 6px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.nav-links a:hover {
+.nav a:hover {
     color: #ffd54f;
 }
 
-.menu-icon {
-    display: none;
-    border: 0;
-    background: transparent;
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #dceeff);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 760px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: #2463a6;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    background-color: #2463a6;
     color: white;
-    font-size: 28px;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-main {
-    width: 92%;
-    max-width: 1000px;
-    margin: 30px auto;
+.btn:hover {
+    background-color: #174f8a;
 }
 
-section {
-    background-color: white;
-    padding: 24px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+.services,
+.testimonials {
+    padding: 70px 5%;
 }
 
-section h1,
-section h2 {
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 34px;
     margin-bottom: 10px;
 }
 
+.service-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    flex: 1 1 280px;
+    min-width: 250px;
+    padding: 28px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    background-color: #ddd;
+}
+
+.testimonial-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    padding: 28px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimonial p {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.testimonial cite {
+    font-style: normal;
+    font-weight: 700;
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 22px 20px;
+    background-color: #333;
+    color: white;
+}
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .header {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
+        align-items: center;
         text-align: center;
-        z-index: 1000;
     }
 
-    .nav-links.active {
-        display: flex;
+    .nav ul {
+        justify-content: center;
+        gap: 14px;
     }
 
-    .nav-links li {
+    .hero {
+        min-height: 420px;
+        padding: 60px 20px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
         width: 100%;
-        margin: 0;
-        padding: 0;
+        min-width: 0;
     }
 
-    .nav-links a {
-        width: 100%;
-        padding: 14px;
-        border-top: 1px solid #444;
+    .testimonial-grid {
+        grid-template-columns: 1fr;
     }
 
-    .nav-links a:hover {
-        background-color: #575757;
-        color: white;
+    .services,
+    .testimonials {
+        padding: 45px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 16px;
     }
 
-    .menu-icon {
-        display: block;
+    .nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero {
+        padding: 50px 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .service,
+    .testimonial {
+        padding: 20px;
     }
 }
