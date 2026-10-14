@@ -1,0 +1,149 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+    min-height: 520px;
+    @include flex-center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, $hero-start, $hero-end);
+
+    .hero-content {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .eyebrow {
+        margin-bottom: 10px;
+        color: $primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: clamp(36px, 6vw, 60px);
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    p {
+        margin-bottom: 28px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    background-color: $primary;
+    color: $white;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+        background-color: $primary-dark;
+    }
+}
+
+.services,
+.testimonials {
+    @include section-space;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+
+    h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+}
+
+.service-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .service {
+        flex: 1 1 280px;
+        min-width: 250px;
+        @include card($service-bg);
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.testimonials {
+    background-color: $section-muted;
+
+    .testimonial-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .testimonial {
+        @include card;
+
+        p {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        cite {
+            font-style: normal;
+            font-weight: 700;
+            color: $cite-color;
+        }
+    }
+}
+
+@include respond($mobile) {
+    .hero {
+        min-height: 420px;
+        padding: 60px 20px;
+    }
+
+    .service-container {
+        flex-direction: column;
+
+        .service {
+            width: 100%;
+            min-width: 0;
+        }
+    }
+
+    .testimonials .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .testimonials {
+        padding: 45px 20px;
+    }
+}
+
+@include respond($small-mobile) {
+    .hero {
+        padding: 50px 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .service-container .service,
+    .testimonials .testimonial {
+        padding: 20px;
+    }
+}
