@@ -3,58 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS flex-wrap Property</title>
+    <title>CSS flex-grow Property</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Thực hành CSS flex-wrap</h1>
+    <h1>Thực hành CSS flex-grow</h1>
 
     <section>
-        <h2>Ví dụ 1: flex-wrap: nowrap</h2>
-        <div class="container nowrap-example">
+        <h2>Ví dụ: Item 2 phát triển lớn hơn các item còn lại</h2>
+        <div class="container">
             <div class="item">Item 1</div>
-            <div class="item">Item 2</div>
+            <div class="item grow-item">Item 2<br><span>flex-grow: 3</span></div>
             <div class="item">Item 3</div>
             <div class="item">Item 4</div>
             <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
         </div>
-    </section>
 
-    <section>
-        <h2>Ví dụ 2: flex-wrap: wrap</h2>
-        <div class="container wrap-example">
-            <div class="item">Item 1</div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Ví dụ 3: flex-wrap: wrap-reverse</h2>
-        <div class="container reverse-example">
-            <div class="item">Item 1</div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Ví dụ 4: flex-wrap: initial</h2>
-        <div class="container initial-example">
-            <div class="item">Item 1</div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
-        </div>
+        <p class="note">
+            Item 2 có <strong>flex-grow: 3</strong>, trong khi các item còn lại có
+            <strong>flex-grow: 1</strong>, vì vậy Item 2 nhận nhiều phần không gian trống hơn.
+        </p>
     </section>
 </body>
 </html>
