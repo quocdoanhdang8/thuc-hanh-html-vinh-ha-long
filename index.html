@@ -3,50 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Layout</title>
+    <title>Bố cục Responsive bằng CSS Flexbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="page">
         <header class="header">
-            <h1>Flexbox Website</h1>
-            <p>Bố cục trang web responsive bằng CSS Flexbox</p>
+            <h1>Responsive Flexbox Layout</h1>
+            <p>Bài tập xây dựng bố cục trang web responsive bằng CSS Flexbox</p>
         </header>
 
-        <nav class="nav">
+        <nav class="navigation">
             <a href="#home">Trang chủ</a>
             <a href="#about">Giới thiệu</a>
             <a href="#news">Tin tức</a>
             <a href="#contact">Liên hệ</a>
         </nav>
 
-        <div class="main-container" id="home">
-            <main class="content">
+        <div class="layout" id="home">
+            <main class="main-content">
                 <h2>Main Content</h2>
-                <p>Đây là khu vực nội dung chính của trang web. Trên desktop, phần này chiếm 3 phần không gian so với 1 phần của sidebar.</p>
+                <p>Đây là khu vực nội dung chính. Trên desktop, phần nội dung và sidebar được bố trí ngang bằng Flexbox.</p>
 
-                <div class="article-list">
-                    <div class="article" id="about">
-                        <h3>Flexbox Layout</h3>
-                        <p>Flexbox giúp sắp xếp các phần tử linh hoạt theo hàng hoặc cột và dễ dàng thích ứng với nhiều kích thước màn hình.</p>
+                <div class="cards">
+                    <div class="card" id="about">
+                        <h3>Giới thiệu Flexbox</h3>
+                        <p>Flexbox giúp sắp xếp các phần tử linh hoạt theo hàng hoặc cột và rất phù hợp để xây dựng giao diện responsive.</p>
                     </div>
-                    <div class="article" id="news">
+                    <div class="card" id="news">
+                        <h3>Tin tức</h3>
+                        <p>Khi màn hình nhỏ hơn 768px, các thành phần chính sẽ tự động chuyển sang bố cục dọc.</p>
+                    </div>
+                    <div class="card">
                         <h3>Responsive Design</h3>
-                        <p>Khi màn hình nhỏ hơn 768px, main content và sidebar sẽ chuyển từ bố cục ngang sang bố cục dọc.</p>
+                        <p>Bố cục không bị tràn màn hình và vẫn dễ đọc trên điện thoại, máy tính bảng và máy tính.</p>
                     </div>
                 </div>
             </main>
 
             <aside class="sidebar">
                 <h2>Sidebar</h2>
-                <div class="sidebar-item">Tin mới</div>
-                <div class="sidebar-item">Quảng cáo</div>
-                <div class="sidebar-item">Liên kết hữu ích</div>
+                <div class="widget">Tin mới</div>
+                <div class="widget">Quảng cáo</div>
+                <div class="widget">Liên kết hữu ích</div>
             </aside>
         </div>
 
         <footer class="footer" id="contact">
-            <p>&copy; 2026 Flexbox Website - Bài thực hành CodeGym</p>
+            <p>&copy; 2026 Responsive Flexbox Layout - CodeGym</p>
         </footer>
     </div>
 </body>
