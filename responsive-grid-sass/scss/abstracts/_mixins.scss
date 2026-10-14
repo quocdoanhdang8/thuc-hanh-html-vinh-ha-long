@@ -1,0 +1,14 @@
+@mixin grid-column($width, $background, $border-right: none) {
+  width: $width;
+  background-color: $background;
+  border-right: $border-right;
+  height: 100%;
+  float: left;
+}
+
+@mixin panel($background, $height: 100%) {
+  width: 100%;
+  height: $height;
+  background-color: $background;
+  border: none;
+}
