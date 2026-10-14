@@ -17,7 +17,7 @@ h1 {
 
 section {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 35px;
     padding: 24px;
     background-color: white;
     border: 1px solid #ddd;
@@ -25,34 +25,38 @@ section {
 
 .container {
     display: flex;
-    width: 100%;
     gap: 10px;
-    border: 2px solid #222;
     padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #333;
 }
 
-.item {
-    flex-grow: 1;
-    flex-basis: 0;
-    padding: 30px 12px;
-    background-color: lightblue;
+.container > div {
+    width: 100px;
+    margin: 10px;
+    color: white;
     text-align: center;
-    border: 1px solid #8abed1;
-}
-
-.grow-item {
-    flex-grow: 3;
-    background-color: lightgreen;
+    line-height: 50px;
     font-weight: bold;
 }
 
-.grow-item span {
-    display: inline-block;
-    margin-top: 6px;
-    font-size: 14px;
+.container-1 {
+    flex-flow: row nowrap;
 }
 
-.note {
-    margin-top: 20px;
+.container-1 > div {
+    background-color: #007bff;
+}
+
+.container-2 {
+    flex-flow: row-reverse nowrap;
+}
+
+.container-2 > div {
+    background-color: #28a745;
+}
+
+section p {
+    margin: 18px 0 0;
     line-height: 1.6;
 }
