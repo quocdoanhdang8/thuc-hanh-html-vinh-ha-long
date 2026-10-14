@@ -1,0 +1,106 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.page-layout {
+  position: relative;
+  min-height: $guide-height;
+}
+
+.grid-container {
+  width: 100%;
+
+  &--foreground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    opacity: $foreground-opacity;
+    z-index: 2;
+  }
+
+  &--guides {
+    opacity: $guide-opacity;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.grid-wrapper {
+  overflow: auto;
+  position: relative;
+
+  &--header {
+    height: $header-height;
+  }
+
+  &--main {
+    height: $main-height;
+  }
+
+  &--footer {
+    height: $footer-height;
+  }
+
+  &--guides {
+    height: $guide-height;
+  }
+}
+
+.grid-content {
+  @include grid-column($column-width, #f1f1f1, 1px solid $color-column-border);
+
+  &--full {
+    width: 100%;
+    border-right-color: transparent;
+  }
+}
+
+.header-block {
+  background-color: $color-header;
+}
+
+.footer-block {
+  background-color: $color-footer;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  padding-top: $sidebar-padding-top;
+  background-color: $color-surface;
+  border: none;
+
+  &--left {
+    .menu-item {
+      @include panel($color-accent, $menu-height);
+      margin-bottom: $menu-gap;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--right {
+    .aside-panel {
+      @include panel($color-accent, 92%);
+    }
+  }
+}
+
+.grid-spacer {
+  background-color: $color-surface;
+  border: none;
+}
+
+.guide-column {
+  background-color: $color-surface;
+  border-right: 1px solid $color-grid-border;
+
+  &--first {
+    border-left: 1px solid $color-grid-border;
+  }
+}
+
+.description {
+  margin-top: 16px;
+}
